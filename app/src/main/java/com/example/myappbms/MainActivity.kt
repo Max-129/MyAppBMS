@@ -40,13 +40,24 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_dashboard,
                 R.id.navigation_notifications,
                 R.id.taskFragment,
-                R.id.profile
+                R.id.profile,
+                R.id.onBoardFragment
             )
+        )
+        val bottomNavFragment = arrayListOf(
+            R.id.navigation_home,
+            R.id.navigation_dashboard,
+            R.id.navigation_notifications,
+            R.id.profile
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            navView.isVisible = destination.id != R.id.taskFragment
+            navView.setupWithNavController(navController)
+
+            navView.isVisible = bottomNavFragment.contains(destination.id)
+            if (destination.id == R.id.onBoardFragment) {
+                supportActionBar?.hide()
+            } else supportActionBar?.show()
         }
-        navView.setupWithNavController(navController)
     }
 }

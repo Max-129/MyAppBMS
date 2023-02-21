@@ -59,9 +59,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:view="get_started"
-        android:layout_marginBottom="16dp"
+        tools:text="Продолжить"
+        android:layout_marginBottom="12dp"
         android:layout_marginHorizontal="24dp"
-android:visibility="gone"
+        android:visibility=""
 
         app:layout_constraintBottom_toBottomOf="parent"/>
 

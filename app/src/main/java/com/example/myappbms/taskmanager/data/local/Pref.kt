@@ -8,7 +8,9 @@ class Pref(context: Context) {
     fun isUserSeen(): Boolean {
         return pref.getBoolean(SEEN_KEY, false)
     }
-
+    fun saveSeen(){
+        pref.edit().putBoolean(SEEN_KEY, true).apply()
+    }
     companion object {
         const val PREF_NAME = "pref.task"
         const val SEEN_KEY = "seen.key"
