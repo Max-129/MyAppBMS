@@ -1,4 +1,4 @@
-package com.example.myappbms.model
+package com.example.myappbms.taskmanager.model
 
 data class Task(
     var title:String? = null,
