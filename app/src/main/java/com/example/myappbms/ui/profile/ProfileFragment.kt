@@ -6,14 +6,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.myappbms.R
+import com.example.myappbms.databinding.FragmentProfileBinding
+import com.example.myappbms.taskmanager.data.local.Pref
 
 
 class ProfileFragment : Fragment() {
+
+    private lateinit var binding: FragmentProfileBinding
+    private lateinit var pref: Pref
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        pref = Pref(requireContext())
+        binding.edName.setText(pref.getName()).toString()
+        pref.saveName(binding.edName.text.toString())
+    }
+
 }
