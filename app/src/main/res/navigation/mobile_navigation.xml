@@ -14,12 +14,6 @@
             android:id="@+id/action_navigation_home_to_onBoardFragment"
             app:destination="@id/onBoardFragment" />
     </fragment>
-    <action
-        android:id="@+id/action_navigation_home_to_onBoardingFragment"
-        app:destination="@id/onBoardFragment"
-        app:launchSingleTop="true"
-        app:popUpTo="@+id/mobile_navigation"
-        app:popUpToInclusive="true" />
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.myappbms.ui.dashboard.DashboardFragment"
@@ -49,8 +43,7 @@
         <action
             android:id="@+id/action_onBoardFragment_to_navigation_home"
             app:destination="@id/navigation_home"
-            app:popUpTo="@+id/mobile_navigation"
-            app:popUpToInclusive="true"/>
+            />
     </fragment>
 
 

@@ -13,6 +13,7 @@ import com.example.myappbms.ui.onboarding.adapter.OnBoardAdapter
 
 class OnBoardFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardBinding
+    private lateinit var pref: Pref
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,7 +25,9 @@ class OnBoardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = OnBoardAdapter() {
+        pref = Pref(requireContext())
+        val adapter = OnBoardAdapter(){
+            pref.saveSeen()
             findNavController().navigateUp()
         }
         binding.viewPager.adapter = adapter
