@@ -47,11 +47,16 @@ class OnBoardAdapter(private val onClick: () -> Unit) :
     inner class OnBoardViewHolder(private val binding: ItemOnboardingBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(onBoarding: OnBoarding) {
+
+            binding.btnSkip.isVisible = adapterPosition == 2
+            binding.skip.isVisible = adapterPosition != 2
+
             binding.title.text = onBoarding.title
             binding.desc.text = onBoarding.desc
             binding.ivBoarding.loadImage(onBoarding.img.toString())
             binding.btnSkip.isVisible = adapterPosition == data.lastIndex
             binding.btnSkip.setOnClickListener { onClick() }
+            binding.skip.setOnClickListener { onClick() }
         }
 
     }
