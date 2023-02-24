@@ -9,9 +9,10 @@ import com.example.myappbms.taskmanager.model.Task
 class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
     private val data = arrayListOf<Task>()
 
-    fun addTask(task: Task) {
-        data.add(0, task)
-        notifyItemChanged(0)
+    fun addTask(tasks: List<Task>) {
+        data.clear()
+        data.addAll(tasks)
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {

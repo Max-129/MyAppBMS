@@ -1,6 +1,14 @@
 package com.example.myappbms.taskmanager.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
+
+
+@Entity
 data class Task(
-    var title:String? = null,
-    var descritpion:String? = null
-):java.io.Serializable
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null,
+    var title: String? = null,
+    var descritpion: String? = null
+) : Serializable
