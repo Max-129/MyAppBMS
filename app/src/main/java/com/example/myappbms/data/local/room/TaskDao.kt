@@ -1,7 +1,7 @@
-package com.example.myappbms.taskmanager.data.local.room
+package com.example.myappbms.data.local.room
 
 import androidx.room.*
-import com.example.myappbms.taskmanager.model.Task
+import com.example.myappbms.model.Task
 
 @Dao
 interface TaskDao {

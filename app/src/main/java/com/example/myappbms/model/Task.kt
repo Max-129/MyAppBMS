@@ -1,4 +1,4 @@
-package com.example.myappbms.taskmanager.model
+package com.example.myappbms.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

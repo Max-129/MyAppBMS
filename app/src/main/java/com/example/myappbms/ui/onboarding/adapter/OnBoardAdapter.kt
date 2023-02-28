@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myappbms.taskmanager.model.OnBoarding
 import com.example.myappbms.databinding.ItemOnboardingBinding
-import com.example.myappbms.taskmanager.utils.loadImage
+import com.example.myappbms.model.OnBoarding
+import com.example.myappbms.utils.loadImage
 
 class OnBoardAdapter(private val onClick: () -> Unit) :
     RecyclerView.Adapter<OnBoardAdapter.OnBoardViewHolder>() {

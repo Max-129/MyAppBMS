@@ -1,4 +1,4 @@
-package com.example.myappbms.taskmanager.data.local
+package com.example.myappbms.data.local
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
@@ -9,11 +9,12 @@ class Pref(context: Context) {
     fun isUserSeen(): Boolean {
         return pref.getBoolean(SEEN_KEY, false)
     }
-    fun saveSeen(){
+
+    fun saveSeen() {
         pref.edit().putBoolean(SEEN_KEY, true).apply()
     }
 
-    fun saveName(name: String){
+    fun saveName(name: String) {
         pref.edit().putString(NAME_KEY, name).apply()
     }
 

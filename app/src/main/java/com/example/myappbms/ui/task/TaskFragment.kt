@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myappbms.App
 import com.example.myappbms.databinding.FragmentTaskBinding
-import com.example.myappbms.taskmanager.model.Task
-import com.example.myappbms.ui.home.HomeFragment
+import com.example.myappbms.model.Task
 
 class TaskFragment : Fragment() {
     private lateinit var binding: FragmentTaskBinding
@@ -32,7 +29,6 @@ class TaskFragment : Fragment() {
                 descritpion = binding.etDesc.text.toString()
             )
             App.db.taskDao().insertTask(task)
-            setFragmentResult(HomeFragment.RESULT_KEY, bundleOf(HomeFragment.TASK_KEY to task))
             findNavController().navigateUp()
         }
     }

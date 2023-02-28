@@ -1,8 +1,8 @@
-package com.example.myappbms.taskmanager.data.local.room
+package com.example.myappbms.data.local.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.myappbms.taskmanager.model.Task
+import com.example.myappbms.model.Task
 
 @Database(entities = [Task::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
