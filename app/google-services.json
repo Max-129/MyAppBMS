@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "691412893614",
+    "project_id": "taskproject-788df",
+    "storage_bucket": "taskproject-788df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691412893614:android:191b727a302ada3fcc523f",
+        "android_client_info": {
+          "package_name": "com.example.TaskProject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691412893614-ap0a76k2flv4hn11fej2ct3dqh0j4f6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.TaskProject",
+            "certificate_hash": "96801dcbd4b68ea6e04d218969eed67466bd1373"
+          }
+        },
+        {
+          "client_id": "691412893614-3jg8o0uq0m9agg2o3lo836f6r4qi6kn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1bZ5WfwWIND3-6Y3jYAlsHxuwisTK4T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691412893614-3jg8o0uq0m9agg2o3lo836f6r4qi6kn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691412893614:android:c9e855ea45f60bbfcc523f",
+        "android_client_info": {
+          "package_name": "com.example.myappbms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691412893614-3jg8o0uq0m9agg2o3lo836f6r4qi6kn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1bZ5WfwWIND3-6Y3jYAlsHxuwisTK4T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691412893614-3jg8o0uq0m9agg2o3lo836f6r4qi6kn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

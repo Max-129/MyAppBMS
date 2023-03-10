@@ -44,6 +44,16 @@
             android:id="@+id/action_onBoardFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.myappbms.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+
+
+    <action
+        android:id="@+id/actionToAuth"
+        app:destination="@+id/authFragment" />
 
 
 </navigation>
