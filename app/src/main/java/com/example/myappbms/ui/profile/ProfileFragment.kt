@@ -10,15 +10,22 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.myappbms.R
 import com.example.myappbms.data.local.Pref
 import com.example.myappbms.databinding.FragmentProfileBinding
 import com.example.myappbms.utils.loadImage
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var pref: Pref
+    private lateinit var auth: FirebaseAuth
+
     private val launcher =
         registerForActivityResult<Intent, ActivityResult>(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK && result.data != null) {
@@ -47,6 +54,12 @@ class ProfileFragment : Fragment() {
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
             launcher.launch(intent)
+        }
+        binding.btnDisFirebase.setOnClickListener {
+            Firebase.auth.signOut()
+            findNavController().navigate(R.id.onBoardFragment)
+            auth.currentUser == null
+            findNavController().navigate(R.id.authFragment)
         }
     }
 
