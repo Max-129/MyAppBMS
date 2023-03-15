@@ -10,4 +10,5 @@
     <string name="save">Save</string>
     <string name="profile">Profile</string>
     <string name="name">Name</string>
+    <string name="filling_val">fill in the value</string>
 </resources>

@@ -24,7 +24,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var pref: Pref
-    private lateinit var auth: FirebaseAuth
+    private var auth= FirebaseAuth.getInstance()
 
     private val launcher =
         registerForActivityResult<Intent, ActivityResult>(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
